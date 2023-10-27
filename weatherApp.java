@@ -54,7 +54,7 @@ public class weatherApp {
         String weatherDescription = jsonObject.getAsJsonArray("weather")
                 .get(0).getAsJsonObject().get("description").getAsString();
 
-        DecimalFormat df = new DecimalFormat("#.##"); // Формат с двумя знаками после запятой
+        DecimalFormat df = new DecimalFormat("#.##");
         String formattedTemperature = df.format(temperature);
 
         System.out.println("Temperature: " + formattedTemperature + "°C");
